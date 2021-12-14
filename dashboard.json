@@ -1,0 +1,379 @@
+{
+    "widgets": [
+        {
+            "height": 6,
+            "width": 24,
+            "y": 3,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1", "stat": "Average" } ],
+                    [ "couchdb-dev", "_stats.couchdb.httpd_request_methods.COPY.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.DELETE.value", ".", ".", { "id": "m2", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.GET.value", ".", ".", { "id": "m3", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.HEAD.value", ".", ".", { "id": "m4", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.OPTIONS.value", ".", ".", { "id": "m5", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.POST.value", ".", ".", { "id": "m6", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.PUT.value", ".", ".", { "id": "m7", "visible": false } ],
+                    
+                    [ ".", "_stats.couchdb.httpd_request_methods.COPY.value", ".", "cluster-couchdb-stack-Node02", { "id": "m8", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.DELETE.value", ".", ".", { "id": "m9", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.GET.value", ".", ".", { "id": "m10", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.HEAD.value", ".", ".", { "id": "m11", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.OPTIONS.value", ".", ".", { "id": "m12", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.POST.value", ".", ".", { "id": "m13", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_request_methods.PUT.value", ".", ".", { "id": "m14", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "RequestType Per Seconds"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 9,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1", "stat": "Maximum", "period": 300 } ],
+                    [ "couchdb-dev", "_stats.couchdb.httpd_status_codes.200.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.201.value", ".", ".", { "id": "m2", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.202.value", ".", ".", { "id": "m3", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.204.value", ".", ".", { "id": "m4", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.206.value", ".", ".", { "id": "m5", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.200.value", ".", "cluster-couchdb-stack-Node02", { "id": "m6", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.201.value", ".", ".", { "id": "m7", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.202.value", ".", ".", { "id": "m8", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.204.value", ".", ".", { "id": "m9", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.206.value", ".", ".", { "id": "m10", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "HTTPD Success Per Sec (200)"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 15,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1" } ],
+                    [ "couchdb-dev", "_stats.couchdb.httpd_status_codes.413.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.414.value", ".", ".", { "id": "m2", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.415.value", ".", ".", { "id": "m3", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.400.value", ".", ".", { "id": "m4", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.401.value", ".", ".", { "id": "m5", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.403.value", ".", ".", { "id": "m6", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.404.value", ".", ".", { "id": "m7", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.406.value", ".", ".", { "id": "m8", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.405.value", ".", ".", { "id": "m9", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.409.value", ".", ".", { "id": "m10", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.412.value", ".", ".", { "id": "m11", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.416.value", ".", ".", { "id": "m12", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.417.value", ".", ".", { "id": "m13", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.400.value", ".", "cluster-couchdb-stack-Node02", { "id": "m14", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.401.value", ".", ".", { "id": "m15", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.403.value", ".", ".", { "id": "m16", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.404.value", ".", ".", { "id": "m17", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.405.value", ".", ".", { "id": "m18", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.406.value", ".", ".", { "id": "m19", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.409.value", ".", ".", { "id": "m20", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.412.value", ".", ".", { "id": "m21", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.413.value", ".", ".", { "id": "m22", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.414.value", ".", ".", { "id": "m23", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.415.value", ".", ".", { "id": "m24", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.416.value", ".", ".", { "id": "m25", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.417.value", ".", ".", { "id": "m26", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "title": "HTTPD Client Errors Per Sec (400)",
+                "stat": "Average",
+                "period": 300
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 21,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1" } ],
+                    [ "couchdb-dev", "_stats.couchdb.httpd_status_codes.500.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.501.value", ".", ".", { "id": "m2", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.503.value", ".", ".", { "id": "m3", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.500.value", ".", "cluster-couchdb-stack-Node02", { "id": "m4", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.501.value", ".", ".", { "id": "m5", "visible": false } ],
+                    [ ".", "_stats.couchdb.httpd_status_codes.503.value", ".", ".", { "id": "m6", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "HTTPD Server Errors Per Sec (500)"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 27,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1", "stat": "Maximum" } ],
+                    [ "couchdb-dev", "_stats.couchdb.database_reads.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m2", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "Database Reads"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 33,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1", "stat": "Maximum" } ],
+                    [ "couchdb-dev", "_stats.couchdb.database_writes.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m2", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "Database Writes"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 39,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1" } ],
+                    [ "couchdb-dev", "_stats.couchdb.database_purges.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m2", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "Database Purges"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 45,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "timeSeries",
+                "stacked": true,
+                "metrics": [
+                    [ "couchdb-dev", "_system.memory.atom", "Server", "cluster-couchdb-stack-Node01" ],
+                    [ ".", "_system.memory.binary", ".", "." ],
+                    [ ".", "_system.memory.code", ".", "." ],
+                    [ ".", "_system.memory.ets", ".", "." ],
+                    [ ".", "_system.memory.other", ".", "." ],
+                    [ ".", "_system.memory.processes", ".", "." ]
+                ],
+                "region": "us-east-2",
+                "title": "cluster-couchdb-stack-Node01 Memory"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 51,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "timeSeries",
+                "stacked": true,
+                "metrics": [
+                    [ "couchdb-dev", "_system.memory.ets", "Server", "cluster-couchdb-stack-Node02" ],
+                    [ ".", "_system.memory.code", ".", "." ],
+                    [ ".", "_system.memory.binary", ".", "." ],
+                    [ ".", "_system.memory.processes", ".", "." ],
+                    [ ".", "_system.memory.other", ".", "." ],
+                    [ ".", "_system.memory.atom", ".", "." ]
+                ],
+                "region": "us-east-2",
+                "title": "cluster-couchdb-stack-Node02 Memory"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 57,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1" } ],
+                    [ "couchdb-dev", "_system.io_input", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m2", "visible": false } ],
+                    [ ".", "_system.io_output", ".", "cluster-couchdb-stack-Node01", { "id": "m3", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m4", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "IO Request Type"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 63,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1", "stat": "Maximum" } ],
+                    [ "couchdb-dev", "_stats.couchdb.document_writes.value", "Server", "cluster-couchdb-stack-Node02", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node01", { "id": "m2", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "Documents Writes"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 69,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ { "expression": "RATE(METRICS())", "label": "Expression1", "id": "e1" } ],
+                    [ "couchdb-dev", "_stats.couchdb.document_inserts.value", "Server", "cluster-couchdb-stack-Node01", { "id": "m1", "visible": false } ],
+                    [ "...", "cluster-couchdb-stack-Node02", { "id": "m2", "visible": false } ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-east-2",
+                "title": "Document Inserts",
+                "stat": "Average",
+                "period": 300
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 75,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "couchdb-dev", "_stats.couchdb.request_time.value.median", "Server", "cluster-couchdb-stack-Node01" ],
+                    [ ".", "_stats.couchdb.request_time.value.standard_deviation", ".", "." ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "cluster-couchdb-stack-Node01 Median / STDE"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 81,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "couchdb-dev", "_stats.couchdb.request_time.value.variance", "Server", "cluster-couchdb-stack-Node02" ],
+                    [ ".", "_stats.couchdb.request_time.value.median", ".", "." ]
+                ],
+                "region": "us-east-2",
+                "title": "cluster-couchdb-stack-Node02 - Median / STDE"
+            }
+        },
+        {
+            "height": 3,
+            "width": 6,
+            "y": 0,
+            "x": 9,
+            "type": "metric",
+            "properties": {
+                "view": "singleValue",
+                "metrics": [
+                    [ "couchdb-dev", "_db_metric.doc_count", "Database", "mydatabase" ]
+                ],
+                "region": "us-east-2",
+                "title": "DB Doc Count"
+            }
+        },
+        {
+            "height": 3,
+            "width": 9,
+            "y": 0,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "singleValue",
+                "metrics": [
+                    [ "couchdb-dev", "_db_metric.sizes.file", "Database", "mydatabase" ],
+                    [ ".", "_db_metric.sizes.active", ".", "." ]
+                ],
+                "region": "us-east-2",
+                "title": "DB Size"
+            }
+        },
+        {
+            "height": 3,
+            "width": 9,
+            "y": 0,
+            "x": 15,
+            "type": "metric",
+            "properties": {
+                "view": "singleValue",
+                "metrics": [
+                    [ "couchdb-dev", "_db_metric.doc_del_count", "Database", "mydatabase" ]
+                ],
+                "region": "us-east-2",
+                "title": "DB Deleted Documents"
+            }
+        }
+    ]
+}

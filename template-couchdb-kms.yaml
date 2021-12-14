@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  This Cloud Formation template create a KMS Key
+
+Parameters:
+  pEC2RolARN:
+    Description: "EC2 Instance profile ARN"
+    Type: String
+    Default: cluster-couchdb-iam-stack-ec2-arn-rol
+
+Resources:
+
+  rKmsKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: !Ref 'AWS::StackName'
+      EnableKeyRotation: true
+      PendingWindowInDays: '30'
+      KeyPolicy:
+        Version: 2012-10-17
+        Id: key-policy
+        Statement:
+          - Sid: Enable IAM User Permissions
+            Effect: Allow
+            Principal:
+              AWS: !Join ["", ["arn:aws:iam::", !Ref 'AWS::AccountId',":root"]]
+            Action:
+              - "kms:*"
+            Resource: '*'
+          - Sid: Allow service-linked role use of the CMK 
+            Effect: Allow
+            Principal:
+              AWS: !Join ["",["{{resolve:ssm:", !Ref pEC2RolARN,"}}"]]
+            Action:
+              - "kms:Encrypt"
+              - "kms:Decrypt"
+              - "kms:ReEncrypt*"
+              - "kms:GenerateDataKey*"
+              - "kms:DescribeKey"                        
+            Resource: '*'
+
+  rKmsKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: !Join ["", ["alias/", !Ref 'AWS::StackName']]
+      TargetKeyId: !Ref rKmsKey
+
+  rKmsKeyParameterStore:
+    Type: AWS::SSM::Parameter
+    Properties: 
+        Description: kmsKey
+        Type: String
+        Name: !Ref 'AWS::StackName'
+        Value:
+            Ref: rKmsKey
+
+  rKmsARNParameterStore:
+    Type: AWS::SSM::Parameter
+    Properties: 
+        Description: kmsKey
+        Type: String
+        Name: !Join ["-", [!Ref 'AWS::StackName', "arn"]]
+        Value: 
+            !GetAtt rKmsKey.Arn
